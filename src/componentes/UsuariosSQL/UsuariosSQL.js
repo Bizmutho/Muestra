@@ -11,11 +11,13 @@ function UsuariosSql(){
 
     async function fetchMyAPI() {
         const resp = await fetchAsyncToAPI('GET');
-        setUsuariosSql(resp);
+        setUsuariosSql(resp.map(usr => {
+            return ({...usr, foto: `https://www.snteseccion30sartet.org.mx/ti/personal/fotos/${usr.foto}`})
+        }));
     }
 
     return(
-        <div>
+        <div style={{width: '100%'}}>
             <UsersList usuarios={usuariosSql}/>
         </div>
     )

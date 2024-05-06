@@ -10,7 +10,7 @@ export default function MsjList({msgs, usuario, style = {}}){
     }, [msgs]);
 
     return(
-        <div style={{minHeight: '250px', ...style}}>
+        <div style={{minHeight: '250px', padding: '0px 5px', ...style}}>
             {msgs.map((item, index) => (
                 (
                     (usuario === item.usuario) ?

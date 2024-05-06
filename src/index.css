@@ -40,3 +40,48 @@ li.selected {
   border-bottom: 2px solid #6a5ac3;
   color: #444;
 }
+
+.btnPageSelected{
+  background-color: #6a5ac3;
+  color: #fff;
+  border-color: #c3c3c3;
+}
+
+p{
+  margin: 0px;
+}
+
+.contenedor-input {
+  position: relative;
+  width: 150px; /* Ajusta el ancho según tu diseño */
+  height: 150px; /* Ajusta el alto según tu diseño */
+}
+
+.input-oculto {
+  display: none;
+}
+
+.label-personalizado {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  min-width: 150px;
+  height: 150px;
+}
+
+.boton-personalizado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f3f3f3; /* Cambia el color de fondo según tu diseño */
+  color: #000; /* Cambia el color del texto según tu diseño */
+  font-size: 14px; /* Cambia el tamaño del texto según tu diseño */
+  background-size: cover;
+  box-shadow: #c3c3c3 0px 0px 0px 4px;
+}

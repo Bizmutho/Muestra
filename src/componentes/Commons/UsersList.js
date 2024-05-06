@@ -18,7 +18,7 @@ export default function UsersList({usuarios}){
     const fin = inicio + DatosPorPagina;
 
     return usuarios.slice(inicio, fin).map((usr, index) => (
-        <div key={usr.idusuario} style={{display: 'flex', justifyContent:'center'}}>
+        <div key={index} style={{display: 'flex', justifyContent:'center'}}>
             <UserCard user={usr}/>
         </div>
     ));
@@ -30,7 +30,7 @@ export default function UsersList({usuarios}){
     let fin = (paginaActual + 5) > totalPages ? totalPages : paginaActual + 5;
     for (let i = ini; i <= fin; i++) {
       pagination.push(
-        <button key={i} onClick={() => handleClick(i)}>
+        <button key={i} onClick={() => handleClick(i)} className={i === paginaActual ? 'btnPageSelected' : ''} style={{margin: '0px 3px'}}>
           {i}
         </button>
       );
@@ -40,31 +40,23 @@ export default function UsersList({usuarios}){
 
   return (
     <div style={{height: '100%'}}>
-      <div style={{overflow: 'auto', maxHeight: '90%', minHeight: '93%'}}>{renderData()}</div>
+      <div style={{overflow: 'auto', maxHeight: '90%', minHeight: '93%', padding: '0px 10px'}}>{renderData()}</div>
       <div style={{display: 'flex', justifyContent: 'center', padding: 15}}>
-        <button
-          disabled={paginaActual === 1}
-          onClick={() => handleClick(1)}
-        >
+        <button disabled={paginaActual === 1} onClick={() => handleClick(1)} >
           {'<<'}
         </button>
-        <button
-          disabled={paginaActual === 1}
-          onClick={() => handleClick(paginaActual - 1)}
-        >
+        <button disabled={paginaActual === 1} onClick={() => handleClick(paginaActual - 1)} style={{marginLeft: 5}}>
           Anterior
         </button>
-        {renderPagination()}
-        <button
-          disabled={paginaActual === totalPages}
-          onClick={() => handleClick(paginaActual + 1)}
-        >
+
+        <div style={{margin: '0px 10px', display: 'flex', alignItems: 'center'}}>
+          {renderPagination()}
+        </div>
+
+        <button disabled={paginaActual === totalPages} onClick={() => handleClick(paginaActual + 1)}>
           Siguiente
         </button>
-        <button
-          disabled={paginaActual === totalPages}
-          onClick={() => handleClick(totalPages)}
-        >
+        <button disabled={paginaActual === totalPages} onClick={() => handleClick(totalPages)} style={{marginLeft: 5}}>
           {'>>'}
         </button>
       </div>

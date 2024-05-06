@@ -8,7 +8,7 @@ export default function MsjItemSaliente({msj}){
     }
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', border: '1px', borderStyle: 'solid', marginBottom: '3px', borderRadius: '10px', padding: '10px', backgroundColor: '#6a5dbf', color: '#fff'}}>
+        <div style={{display: 'flex', flexDirection: 'column', marginBottom: '5px', borderRadius: '10px', padding: '10px', backgroundColor: '#6a5dbf', color: '#fff', boxShadow: '0px 0px 2px 1px #c3c3c3'}}>
             <span style={{margin: '3px 0px'}}>
                 {msj.mensaje}
             </span>

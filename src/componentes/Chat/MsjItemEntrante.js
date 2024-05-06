@@ -25,7 +25,7 @@ export default function MsjItemEntrante({msj}){
     }
 
     return(
-        <div style={{display: 'flex', flexDirection: 'column', marginBottom: '3px', borderRadius: '10px', padding: '5px 10px', backgroundColor: '#eeeeee'}}>
+        <div style={{display: 'flex', flexDirection: 'column', marginBottom: '5px', borderRadius: '10px', padding: '5px 10px', backgroundColor: '#eeeeee', boxShadow: '0px 0px 2px 1px #c3c3c3'}}>
             <span style={{fontWeight: 'bold', fontSize: '12px', color}}>
                 {msj.usuario}
             </span>

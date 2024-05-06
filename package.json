@@ -1,5 +1,6 @@
 {
   "name": "muestra",
+  "displayName": "Muestra",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
