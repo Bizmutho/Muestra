@@ -16,8 +16,8 @@ export default function AddUsuario(){
         usuario_puesto: "",
         celular: ""
     });
-    const [img, setImg] = useState();
-    const [imgFile, setImgFile] = useState([]);
+    const [img, setImg] = useState(null);
+    const [imgFile, setImgFile] = useState(null);
     const inputFile = useRef(null);
 
     useEffect(() => {
@@ -40,15 +40,15 @@ export default function AddUsuario(){
     function usuarioValido(){
         var msj = '';
 
-        Object.keys(usuario).forEach(function(key) {
-            if(usuario[key] === undefined || usuario[key] === ''){
-                msj = 'Por favor, complete el formulario ' + key;
-                return false;
-            }
-        });
-
         if(imgFile === null || imgFile === undefined || imgFile === ''){
             msj = "Por favor, seleccione una imagen."
+        } else {
+            Object.keys(usuario).forEach(function(key) {
+                if(usuario[key] === undefined || usuario[key] === ''){
+                    msj = 'Por favor, complete el formulario';
+                    return false;
+                }
+            });
         }
 
         if(msj === '')

@@ -56,7 +56,7 @@
     color: #fff;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 680px) {
     .addContainer {
         max-width: 95%;
     }

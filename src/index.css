@@ -53,8 +53,8 @@ p{
 
 .contenedor-input {
   position: relative;
-  width: 150px; /* Ajusta el ancho según tu diseño */
-  height: 150px; /* Ajusta el alto según tu diseño */
+  width: 150px;
+  height: 150px;
 }
 
 .input-oculto {
@@ -79,9 +79,9 @@ p{
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #f3f3f3; /* Cambia el color de fondo según tu diseño */
-  color: #000; /* Cambia el color del texto según tu diseño */
-  font-size: 14px; /* Cambia el tamaño del texto según tu diseño */
+  background-color: #f3f3f3;
+  color: #000;
+  font-size: 14px;
   background-size: cover;
   box-shadow: #c3c3c3 0px 0px 0px 4px;
 }
